@@ -1,6 +1,2 @@
-FROM php:8.0-apache
-WORKDIR /var/www/html
-
-COPY index.php index.php
-
-EXPOSE 80
+FROM httpd:2.4
+COPY ./login.php/ /usr/local/apache2/htdocs/
