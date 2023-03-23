@@ -1,3 +1,6 @@
-FROM httpd:2.4
+FROM php:8.0-apache
+WORKDIR /var/www/html
 
-COPY . /index.php /usr/local/apache2/htdocs/
+COPY index.php index.php
+COPY src/ src
+EXPOSE 80
